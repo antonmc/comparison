@@ -62,9 +62,75 @@ function watsonstt(minutes, days, users){
   return calculateWatsonCost();
 }
 
+/* MICROSOFT */
+
+let MSRATEA = 0;
+let MSRATEB = 0.019456; /* COST PER MINUTE - MS CHARGES VERY DIFFERENTLY */
+
+let MSCAPA = 1250; /* 5000 15 second transactions = 1250 minutes */
+
+var msMinutesAtRateA = 0;
+var msMinutesAtRateB = 0;
+
+function calculateBingCost(){
+  cost = MSRATEA * msMinutesAtRateA +
+  MSRATEB * msMinutesAtRateB;
+  var dollars = cost.toFixed(2);
+  return dollars;
+}
+
+function bingstt(minutes, days, users){
+
+  if( days > 0 ){
+     minutes = minutes * days;
+  }
+
+  if( users > 0 ){
+    minutes = minutes * users;
+  }
+
+  if( minutes > MSCAPA ){
+    msMinutesAtRateB = minutes - MSRATEA;
+    msMinutesAtRateA = MSCAPA;
+  }
+  return calculateBingCost();
+}
+
+/* GOOGLE */
+
+let GOOGLERATEA = 0;
+let GOOGLERATEB = 0.015; /* COST PER MINUTE - GOOGLE CHARGES VERY DIFFERENTLY */
+
+let GOOGLECAPA = 60; /* 5000 15 second transactions = 1250 minutes */
+
+var googleMinutesAtRateA = 0;
+var googleMinutesAtRateB = 0;
+
+function calculateGoogleCost(){
+  cost = GOOGLERATEA * googleMinutesAtRateA +
+  GOOGLERATEB * googleMinutesAtRateB;
+  var dollars = cost.toFixed(2);
+  return dollars;
+}
+
+function googlestt(minutes, days, users){
+
+  if( days > 0 ){
+     minutes = minutes * days;
+  }
+
+  if( users > 0 ){
+    minutes = minutes * users;
+  }
+
+  if( minutes > GOOGLECAPA ){
+    googleMinutesAtRateB = minutes - GOOGLERATEA;
+    googleMinutesAtRateA = GOOGLECAPA;
+  }
+  return calculateGoogleCost();
+}
 
 function calculate(){
-
 
   var minutes = document.getElementById('minuteslider');
   var days = document.getElementById('dayslider');
@@ -85,4 +151,10 @@ function calculate(){
 
   var ibmcost = document.getElementById('ibmcost');
   ibmcost.innerHTML = '$' + watsonstt(minutes.value, days.value, users.value);
+
+  var mscost = document.getElementById('mscost');
+  mscost.innerHTML = '$' + bingstt(minutes.value, days.value, users.value);
+
+  var googlecost = document.getElementById('googlecost');
+  googlecost.innerHTML = '$' + googlestt(minutes.value, days.value, users.value);
 }

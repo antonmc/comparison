@@ -6,7 +6,7 @@ body, html {
   font-family: sans-serif;
   color: #333;
   font-size: 16px;
-  color: #5ba3d3;
+  color: #444;
 }
 
 .title {
@@ -86,7 +86,7 @@ body, html {
 .control-label {
   height: 30px;
   font-size: 13px;
-  color: #5ba3d3;
+  color: #777777;
 }
 
 .chart {
@@ -115,7 +115,7 @@ body, html {
   margin-top: 0;
   border: none;
   font-size: 14px;
-  color: #5ba3d3;
+  color: #444;
   font-weight: bold;
 }
 
@@ -127,7 +127,7 @@ body, html {
   height: 0.25rem;
   outline: none;
   border-radius: 0.25rem;
-  background: #5ba3d3;
+  background: #777777;
 }
 
 .slider::-webkit-slider-thumb {
@@ -136,7 +136,7 @@ body, html {
   width: 1.4rem;
   height: 1.4rem;
   background-color: #fff;
-  border: 0.25rem solid #5ba3d3;
+  border: 0.25rem solid #777777;
   border-radius: 1rem;
   cursor: pointer;
 }
@@ -144,7 +144,7 @@ body, html {
 .value {
   width: 70px;
   text-align: center;
-  color: #5ba3d3;
+  color: #444;
   font-size: 15px;
   font-weight: bold;
 }
@@ -214,16 +214,16 @@ body, html {
 .saving {
   width: 50px;
   height: 10%;
-  background: #afeadb;
+  background: #a3d35b;
 }
 
 .amount {
   width: 50px;
   height: 90%;
-  background: #d5e2e4;
+  background: #5ba3d3;
 }
 
 .excess {
   width: 50px;
-  background: #efb28f;
+  background: #d35ba3;
 }
