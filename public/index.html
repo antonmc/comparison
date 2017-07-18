@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Service Comparison</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <script src="comparison.js"></script>
+</head>
+
+<body>
+  <div class="site-header">
+    <div class="site-header-inner">
+      <div class="logoholder">
+        <div class="title">
+          SERVICE COST COMPARISON
+        </div>
+      </div>
+      <div class="site-links"></div>
+    </div>
+  </div>
+  <div class="site-body user-layout-container">
+    <div class="site-body-inner">
+      <div class="split">
+        <div class="control">
+          <div class="control-row">
+            <label class="control-label">Service:</label>
+            <select class="input">
+              <option value="speechtotext">Speech To Text</option>
+              <option value="texttospeech">Text To Speech</option>
+              <option value="noderuntime">Node JS</option>
+            </select>
+          </div>
+          <div class="control-row">
+            <label class="control-label">Duration [minutes]:</label>
+            <input class="input" type="number" min="0" max="100" step="5">
+          </div>
+          <div class="control-row">
+            <label class="control-label">Repition [days]:</label>
+            <input class="input" type="number" min="0" max="100" step="5">
+          </div>
+          <div class="control-row">
+            <label class="control-label">Userbase [actual]</label>
+            <input class="input" type="number" min="0" max="100" step="5">
+          </div>
+        </div>
+        <div class="chart">
+          <div class="entry">
+            <div class="cost">$200</div>
+            <div class="north">
+
+            </div>
+            <div class="south">
+              <div class="saving"></div>
+              <div class="amount"></div>
+            </div>
+            <div class="company">IBM</div>
+          </div>
+          <div class="entry">
+            <div class="cost">$200</div>
+            <div class="north">
+              <div class="excess" style="height:10%;"></div>
+            </div>
+            <div class="south">
+              <div class="saving" style="height:0;"></div>
+              <div class="amount" style="height:100%;"></div>
+            </div>
+            <div class="company">MICROSOFT</div>
+          </div>
+          <div class="entry">
+            <div class="cost">$200</div>
+            <div class="north"></div>
+            <div class="south"></div>
+            <div class="company">AWS</div>
+          </div>
+          <div class="entry">
+            <div class="cost">$200</div>
+            <div class="north"></div>
+            <div class="south"></div>
+            <div class="company">GOOGLE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
