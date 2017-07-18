@@ -60,4 +60,18 @@ function watsonstt(minutes, days, users){
   return calculateWatsonCost();
 }
 
-console.log( watsonstt(30, 30, 100000))
+
+function calculate(){
+
+
+  var minutes = document.getElementById('minuteslider');
+  var days = document.getElementById('dayslider');
+  var users = document.getElementById('userslider');
+
+  console.log('minutes: ' + minutes.value)
+  console.log('days: ' + days.value)
+  console.log('users: ' + users.value)
+
+  console.log("$" + watsonstt(minutes.value, days.value, users.value)/100)
+
+}

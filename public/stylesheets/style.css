@@ -5,8 +5,8 @@ body, html {
   margin: 0 auto;
   font-family: sans-serif;
   color: #333;
-  font-size: 14px;
-  color: #1076ba;
+  font-size: 16px;
+  color: #5ba3d3;
 }
 
 .title {
@@ -39,7 +39,7 @@ body, html {
   max-width: 1010px;
   min-width: 1010px;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .user-layout-container {
@@ -52,27 +52,41 @@ body, html {
 
 .split {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 .control {
   display: flex;
   flex-direction: column;
-  width: 280px;
-  background: #cae3f1;
+  /*width: 280px;*/
   padding: 10px;
+  margin: 80px;
 }
 
 .control-row {
-  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.control-input {
   display: flex;
   flex-direction: row;
   align-items: center;
   align-content: center;
+  margin-bottom: 14px;
 }
 
 .control-label {
-  width: 100px;
+  height: 30px;
+  font-size: 13px;
+  color: #5ba3d3;
 }
 
 .chart {
@@ -90,6 +104,49 @@ body, html {
   height: 20px;
   justify-content: flex-end;
   border: 1px solid #cae3f1;
+}
+
+.service-input {
+  width: 150px;
+  height: 20px;
+  justify-content: flex-end;
+  border: 1px solid #cae3f1;
+  margin: 30px;
+  margin-top: 0;
+  border: none;
+  font-size: 14px;
+  color: #5ba3d3;
+  font-weight: bold;
+}
+
+.slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 10rem;
+  height: 0.25rem;
+  outline: none;
+  border-radius: 0.25rem;
+  background: #5ba3d3;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #fff;
+  border: 0.25rem solid #5ba3d3;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.value {
+  width: 70px;
+  text-align: center;
+  color: #5ba3d3;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 
@@ -115,6 +172,7 @@ body, html {
   align-content: center;
   border-bottom: 1px solid #cae3f1;
   width: 100%;
+  font-weight: bold;
 }
 
 .company {
@@ -126,6 +184,7 @@ body, html {
   align-content: center;
   border-top: 1px solid #cae3f1;
   width: 100%;
+  font-weight: bold;
 }
 
 .north {

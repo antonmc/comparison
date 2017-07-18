@@ -24,28 +24,13 @@
   <div class="site-body user-layout-container">
     <div class="site-body-inner">
       <div class="split">
-        <div class="control">
-          <div class="control-row">
-            <label class="control-label">Service:</label>
-            <select class="input">
-              <option value="speechtotext">Speech To Text</option>
-              <option value="texttospeech">Text To Speech</option>
-              <option value="noderuntime">Node JS</option>
-            </select>
-          </div>
-          <div class="control-row">
-            <label class="control-label">Duration [minutes]:</label>
-            <input class="input" type="number" min="0" max="100" step="5">
-          </div>
-          <div class="control-row">
-            <label class="control-label">Repition [days]:</label>
-            <input class="input" type="number" min="0" max="100" step="5">
-          </div>
-          <div class="control-row">
-            <label class="control-label">Userbase [actual]</label>
-            <input class="input" type="number" min="0" max="100" step="5">
-          </div>
-        </div>
+
+        <select class="service-input">
+          <option value="speechtotext">Speech To Text</option>
+          <option value="texttospeech">Text To Speech</option>
+          <option value="noderuntime">Node JS</option>
+        </select>
+
         <div class="chart">
           <div class="entry">
             <div class="cost">$200</div>
@@ -82,8 +67,40 @@
             <div class="company">GOOGLE</div>
           </div>
         </div>
+
+        <div class="control">
+
+          <div class="control-row">
+
+            <div class="control-input">
+              <div class="value">1</div>
+              <input id="minuteslider" type="range" min="1" max="60" value="1" class="slider" onchange="calculate()" />
+              <div class="value">60</div>
+            </div>
+            <label class="control-label">Minutes per user per day</label>
+          </div>
+          <div class="control-row">
+
+            <div class="control-input">
+              <div class="value">1</div>
+              <input id="dayslider" type="range" min="1" max="31" value="1" class="slider" onchange="calculate()" />
+              <div class="value">31</div>
+            </div>
+            <label class="control-label">Days per month</label>
+          </div>
+          <div class="control-row">
+
+            <div class="control-input">
+              <div class="value">1</div>
+              <input id="userslider" type="range" min="1" max="100000" value="1" class="slider" onchange="calculate()" />
+              <div class="value">100000</div>
+            </div>
+            <label class="control-label">Users</label>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
 </body>
 
 </html>
