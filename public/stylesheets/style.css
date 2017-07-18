@@ -175,6 +175,10 @@ body, html {
   font-weight: bold;
 }
 
+.count {
+  margin-right: 5px;
+}
+
 .company {
   height: 50px;
   display: flex;

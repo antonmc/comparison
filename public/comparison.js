@@ -24,7 +24,9 @@ function calculateWatsonCost(){
   RATEB * minutesAtRateB +
   RATEA * minutesAtRateA;
 
-  return cost;
+  var dollars = cost.toFixed(2);
+
+  return dollars;
 }
 
 function watsonstt(minutes, days, users){
@@ -68,10 +70,19 @@ function calculate(){
   var days = document.getElementById('dayslider');
   var users = document.getElementById('userslider');
 
+  var minuteslabel = document.getElementById('minuteslabel');
+  minuteslabel.innerHTML = minutes.value;
+
+  var daysslabel = document.getElementById('dayslabel');
+  dayslabel.innerHTML = days.value;
+
+  var userslabel = document.getElementById('userslabel');
+  userslabel.innerHTML = users.value;
+
   console.log('minutes: ' + minutes.value)
   console.log('days: ' + days.value)
   console.log('users: ' + users.value)
 
-  console.log("$" + watsonstt(minutes.value, days.value, users.value)/100)
-
+  var ibmcost = document.getElementById('ibmcost');
+  ibmcost.innerHTML = '$' + watsonstt(minutes.value, days.value, users.value);
 }
