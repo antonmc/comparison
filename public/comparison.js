@@ -129,6 +129,10 @@ function drawBar(average, mycost, company) {
   var mysavingdiv = document.getElementById(company + 'saving');
   var myexcessdiv = document.getElementById(company + 'excess');
 
+  if(average === mycost){
+      myamountdiv.style.height = '100%';
+  }else{
+
   if (mycost > average) {
 
     var amount = 100 / average * mycost;
@@ -137,13 +141,16 @@ function drawBar(average, mycost, company) {
     myamountdiv.style.height = '100%';
     mysavingdiv.style.height =0;
     myexcessdiv.style.height = amount + '%';
+    myexcessdiv.title = amount + '%';
   } else {
     var amount = 100 / average * mycost;
     amount = amount.toFixed(0);
     myamountdiv.style.height = amount + '%';
     mysavingdiv.style.height = 100 - amount + '%';
+    mysavingdiv.title = 100 - amount + '%';
     myexcessdiv.style.height = 0;
   }
+}
 }
 
 function reset() {
@@ -199,6 +206,11 @@ function calculate() {
   googlecost.innerHTML = '$' + googleDollars.toFixed(2);
 
   var average = (ibmDollars + msDollars + googleDollars) / 3;
+
+var a = document.getElementById('average');
+
+a.innerHTML = 'Average cost: $' + average.toFixed(2);
+
 
   // var ibmamount = document.getElementById('ibmamount');
   // var msamount = document.getElementById('ibmamount');
