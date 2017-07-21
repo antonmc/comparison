@@ -224,6 +224,24 @@ a.innerHTML = 'Average cost: $' + average.toFixed(2);
   drawBar(average, msDollars, 'ms')
   drawBar(average, googleDollars, 'google')
 
+  var ibmpu = ibmDollars/users.value;
+  ibmpu = ibmpu.toFixed(2);
+
+  var ibmaverage = document.getElementById('ibmaverage');
+  ibmaverage.innerHTML = '$' + ibmpu + ' per user';
+
+  var mspu = msDollars/users.value;
+  mspu = mspu.toFixed(2);
+
+  var msaverage = document.getElementById('msaverage');
+  msaverage.innerHTML = '$' + mspu + ' per user';
+
+  var googlepu = googleDollars/users.value;
+  googlepu = googlepu.toFixed(2);
+
+  var googleaverage = document.getElementById('googleaverage');
+  googleaverage.innerHTML = '$' + googlepu + ' per user';
+
 
   // if( ibmcost > average ){
   //   ibmamount.style.height = '100%';
